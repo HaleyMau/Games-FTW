@@ -1,0 +1,84 @@
+%% Data Preprocessing (By Platform)
+%Organizes data by platform, including important information such as game
+%title, release date, etc.
+%Last Updated: November 9, 2016
+
+%% Data input
+load ('IGNGR.mat');
+load ('platform.mat');
+
+%% Platform Organization
+DreamcastSort = contains(platform, 'Dreamcast');
+Dreamcast = IGNGR(DreamcastSort == 1, :);
+
+PlayStationSort = contains(platform, 'PlayStation');  %Need to find a way to narrow down the search, it's not only giving me 'PlayStation' but PlayStation 1,2,3 etc :(
+PlayStation = IGNGR (PlayStationSort == 1, :); 
+
+PlayStation2Sort = contains(platform, 'PlayStation 2');
+PlayStation2 = IGNGR(PlayStation2Sort == 1, :);
+
+PlayStation3Sort = contains(platform, 'PlayStation 3');
+PlayStation3 = IGNGR(PlayStation3Sort == 1, :);
+
+PlayStation4Sort = contains(platform, 'PlayStation 4');
+PlayStation4 = IGNGR(PlayStation4Sort == 1, :);
+
+PlayStationPortableSort = contains(platform, 'PlayStation Portable');
+PlayStationPortable = IGNGR(PlayStationPortableSort == 1, :);
+
+PlayStationVitaSort = contains(platform, 'PlayStation Vita');
+PlayStationVita = IGNGR(PlayStationVitaSort == 1, :);
+
+XboxSort = contains(platform, 'Xbox');  %Same as PlayStation Problem
+Xbox = IGNGR(XboxSort == 1, :);
+
+Xbox360Sort = contains(platform, 'Xbox 360');
+Xbox360 = IGNGR(Xbox360Sort == 1, :);
+
+XboxOneSort = contains(platform, 'Xbox One');
+XboxOne = IGNGR(XboxOneSort == 1, :);
+
+GameBoyAdvanceSort = contains(platform, 'Game Boy Advance');
+GameBoyAdvance = IGNGR(GameBoyAdvanceSort == 1, :);
+
+GameBoyColorSort = contains(platform, 'Game Boy Color');
+GameBoyColor = IGNGR(GameBoyColorSort == 1, :);
+
+Nintendo64Sort = contains(platform, 'Nintendo 64');
+Nintendo64 = IGNGR(Nintendo64Sort == 1, :);
+
+NintendoDSSort = contains(platform, 'Nintendo DS'); %Same as PlayStation Problem
+NintendoDS = IGNGR(NintendoDSSort == 1, :);
+
+NintendoDSiSort = contains(platform, 'Nintendo DSi');
+NintendoDSi = IGNGR(NintendoDSiSort == 1, :);
+
+Nintendo3DSSort = contains(platform, 'Nintendo 3DS');
+Nintendo3DS = IGNGR(Nintendo3DSSort == 1, :);
+
+WiiSort = contains(platform, 'Wii'); %Same as PlayStation Problem
+Wii = IGNGR(WiiSort == 1, :);
+
+WiiUSort = contains(platform, 'Wii U');
+WiiU = IGNGR(WiiUSort == 1, :);
+
+GamecubeSort = contains(platform, 'Gamecube');
+Gamecube = IGNGR(GamecubeSort == 1, :);
+
+iPadSort = contains(platform, 'iPad');
+iPad = IGNGR(iPadSort == 1, :);
+
+MacintoshSort = contains(platform, 'Macintosh');
+Macintosh = IGNGR(MacintoshSort == 1, :);
+
+PCSort = contains(platform, 'PC');
+PC = IGNGR(PCSort == 1, :);
+
+LynxSort = contains(platform, 'Lynx');
+Lynx = IGNGR(LynxSort == 1, :);
+
+WirelessSort = contains(platform, 'Wireless');
+Wireless = IGNGR(WirelessSort == 1, :);
+
+iPhoneSort = contains(platform, 'iPhone');
+iPhone = IGNGR(iPhoneSort == 1, :);
